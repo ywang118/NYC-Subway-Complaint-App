@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SexyTrain</title>
+    <title>MTA Complaints</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,10 +11,6 @@
 
   <body>
     <%= render "layouts/navigation" %>
-    <% if logged_in? %>
-       <%= button_to "Logout", logout_path, method: :delete %>
-    <% end %>
-
     <%= yield %>
   </body>
 </html>

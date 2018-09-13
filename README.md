@@ -22,3 +22,14 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+grid:
+----
+`flexbox froggy`
+www.scrimba.com
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+.image-gallery {
+  display: flex
+}

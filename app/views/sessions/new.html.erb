@@ -1,16 +1,45 @@
-<h1>Login</h1>
+<div class="row no-gutters">
+  <div class="col-12 col-sm-6 col-sm-7">
 
-<h3><%= flash[:notice] %></h3>
-
-<%= form_tag login_path do %>
-  <%= label_tag :username %>
-  <%= text_field_tag :name %>
-
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
-
-  <%= submit_tag "Login" %>
-<% end %>
+    <img src="/subway_car_2.jpg" alt="" class="img-responsive img-rounded">
 
 
-<h2><%=link_to("Are you a New User?", new_user_path)%></h2>
+
+  </div>
+
+  <div class="col-6 col-md-4">
+    <div class="input-control">
+
+
+      <h3><%= flash[:notice] %></h3>
+
+<br>
+      <h1>Login</h1>
+      <%= form_tag login_path do %>
+      <br>
+      <%= label_tag :username %>
+      <%= text_field_tag :name, nil,  class:"form-control" %>
+      <br>
+      <%= label_tag :password %>
+      <%= password_field_tag :password, nil, class:"form-control"%>
+
+      <br>
+      <%= submit_tag "Login", class:"btn btn-success btn-block"  %>
+      <br>
+      <% end %>
+      <%= button_to "Sign Up", new_user_path, method: :get, class: "btn btn-info btn-block" %>
+      <br>
+      <div class="panel-group">
+        <div class="panel panel col-md-6 col-md-offset-3">
+          <div class="panel-heading">
+            <h6 class="panel-title">
+              <h5><a data-toggle="collapse" href="#collapse">Forgot Password?</a></h5>
+            </h6>
+          </div>
+          <div id= "collapse" class="panel-collapse col-md-offset">
+            <div class="panel-body">That Sucks Harder Than The MTA</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
