@@ -1,4 +1,11 @@
-<h3><%= flash[:notice] %></h3>
+<div class="col-6 col-md-4">
+  <div class="input-control">
+    <div class= "alert alert-success alert-dismissible">
+
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      <strong><%= flash[:notice] %></strong>
+   </div>
+</div>
 
 <div class="media">
   <div class="media-left">
@@ -10,7 +17,7 @@
   <div class="media-body">
     <h1 class="media-heading"><%= @user.name %></h1>
     <p>
-      <%= @user.location %>
+      Location: <%= @user.location %>
     </p>
     <% if current_user.id == @user.id %>
 
