@@ -2,7 +2,10 @@
   <h1>Lodge A Formal Train Complaint</h1>
   <div class="form-group">
     <br>
+     <!-- check if there are any validation errors-->
     <%= render 'layouts/errors', obj: @train_complaint%>
+    <!--form for new subway line complaint -->
+
     <%= form_for @train_complaint do |f| %>
     <div>
       <h4><%= f.label :Title %></h4>
@@ -20,7 +23,6 @@
 
     </div>
     <br>
-      <!-- hidden_field(:object, :field, :value => params[:requestval]) -->
       <%= f.hidden_field(:user_id, {value: session[:user_id]}) %>
       <%= f.submit("Submit Complaint", {class:"btn btn-danger"}) %>
     </div>

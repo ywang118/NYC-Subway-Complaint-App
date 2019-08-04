@@ -1,15 +1,19 @@
+<!-- Users index page-->
+
 <div class="container">
   <h1>Users</h1>
+  <!-- chart displaying users ordered by number of Complaints -->
   <%= column_chart User.most_complaints, ytitle: "Total Complaints", width: "100%" %>
   <div class="list-group">
     <%@users.each do |user|  %>
-    <!-- <%=link_to(user.name, user_path(user), class: "list-group-item")%> -->
+
     <div class:"list-group-item">
       <div class="media">
         <div class="media-left">
+          <%if user.photo %>
           <img src=<%= user.photo  %> class="media-object" height="50" width="50">
-
-      </div>
+          <%end %>
+        </div>
         <div class="media-body">
           <h3 class="media-heading"><%=link_to(user.name, user_path(user))%>   <span class="badge"> <%= (user.train_complaints.count + user.station_complaints.count) %></span></h3>
           <p>Location:

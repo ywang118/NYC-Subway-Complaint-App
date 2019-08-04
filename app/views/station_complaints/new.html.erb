@@ -2,7 +2,9 @@
   <h1>Lodge A Formal Station Complaint</h1>
   <div class="form-group">
     <br>
+    <!--check if there are validation issues -->
     <%= render 'layouts/errors', obj: @station_complaint%>
+    <!-- form for creating a station complaint-->
     <%= form_for @station_complaint do |f| %>
     <div>
       <h4><%= f.label :Title %></h4>

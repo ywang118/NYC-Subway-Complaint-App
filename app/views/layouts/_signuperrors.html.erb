@@ -1,4 +1,4 @@
-<!--template for displaying error messages -->
+<!--template for displaying sign up error messages -->
 
 <% if obj.errors.any? %>
   <div class="row">
@@ -6,8 +6,10 @@
       <div class="panel panel-danger">
         <div class="panel-heading">
           <h2 class="panel-title">
+            Unable To Complete Signup:
+            <br>
             <%= pluralize(obj.errors.count, "error") %>
-            Prevented This Complaint from Posting:
+            
           </h2>
           <div class="panel-body">
             <ul>

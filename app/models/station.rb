@@ -1,10 +1,11 @@
 class Station < ApplicationRecord
   has_many :station_complaints
   has_many :users, through: :station_complaints
-
   has_many :train_stations
   has_many :trains, through: :train_stations
-  #method for array ordered by number of Complaints
+
+  #method for creating specific array ordered by number of Complaints
+  #used for displaying chart
  def self.most_complaints
    sorted_array = self.all.sort_by do |station|
      station.station_complaints.size
