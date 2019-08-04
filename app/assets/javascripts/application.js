@@ -18,3 +18,4 @@
 //= require_tree .
 //= require highcharts
 //= require chartkick
+//= require Chart.bundle
